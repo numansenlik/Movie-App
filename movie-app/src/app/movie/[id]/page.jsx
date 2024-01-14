@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const getMovie = async (id) => {
   const options = {
     method: "GET",
@@ -20,6 +22,27 @@ const Page = async ({ params }) => {
 
   const movieDetail = await getMovie(id);
   console.log(movieDetail, "movies");
-  return <div className="relative p-7 min-h-screen">{movieDetail.title}</div>;
+  return (
+    <div className="relative p-7 min-h-screen">
+      <Image
+        fill
+        alt="image"
+        className="object-cover"
+        src={`https:/image.tmdb.org/t/p/original${
+          movieDetail?.backdrop_path || movieDetail?.poster_path
+        }`}
+      />
+      <div className="absolute">
+        <div className="text-4xl font-bold my-3">{movieDetail?.title}</div>
+        <div className="w-1/2 ">{movieDetail?.overview}</div>
+        <div className="w-1/2 my-3">
+          {movieDetail?.release_date} - {movieDetail?.vote_average.toFixed(2)}
+        </div>
+        <div className="border my-4 w-32 p-2 rounded-md text-center text-lg cursor-pointer font-bold hover:bg-white hover:text-gray-600">
+          Trail
+        </div>
+      </div>
+    </div>
+  );
 };
 export default Page;

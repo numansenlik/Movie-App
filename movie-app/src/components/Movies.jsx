@@ -10,6 +10,7 @@ const Movies = ({ dt }) => {
       className="min-w-[400px] flex items-center relative flex-wrap cursor-pointer"
     >
       <Image
+        className="object-cover"
         width={400}
         height={300}
         alt="Image"
