@@ -7,8 +7,8 @@ const Tabs = () => {
   const genre = searchParams.get("genre");
   const tabs = [
     {
-      name: "Populer",
-      url: "populer",
+      name: "Popular",
+      url: "popular",
     },
     { name: "Latest", url: "latest" },
     {
