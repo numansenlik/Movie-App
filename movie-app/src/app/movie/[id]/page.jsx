@@ -23,7 +23,7 @@ const Page = async ({ params }) => {
   const movieDetail = await getMovie(id);
   console.log(movieDetail, "movies");
   return (
-    <div className="relative p-7 min-h-screen">
+    <div className="relative p-7 min-h-screen ">
       <Image
         fill
         alt="image"
@@ -32,13 +32,15 @@ const Page = async ({ params }) => {
           movieDetail?.backdrop_path || movieDetail?.poster_path
         }`}
       />
-      <div className="absolute">
-        <div className="text-4xl font-bold my-3">{movieDetail?.title}</div>
-        <div className="w-1/2 ">{movieDetail?.overview}</div>
-        <div className="w-1/2 my-3">
+      <div className="absolute ">
+        <div className="text-4xl font-bold my-3 text-white">
+          {movieDetail?.title}
+        </div>
+        <div className="w-1/2  text-white">{movieDetail?.overview}</div>
+        <div className="w-1/2 my-3  text-white">
           {movieDetail?.release_date} - {movieDetail?.vote_average.toFixed(2)}
         </div>
-        <div className="border my-4 w-32 p-2 rounded-md text-center text-lg cursor-pointer font-bold hover:bg-white hover:text-gray-600">
+        <div className="border my-4 w-32 p-2 rounded-md text-center text-lg cursor-pointer font-bold hover:bg-white hover:text-gray-600 text-white">
           Trail
         </div>
       </div>

@@ -19,8 +19,8 @@ const Movies = ({ dt }) => {
         }`}
       />
       <div className="absolute bottom-0 p-3 w-full h-full flex flex-col justify-end opacity-0 hover:opacity-100 transition duration-500 ">
-        <div className="text-xl font-semibold">{dt?.title}</div>
-        <div className="">Rate : {dt?.vote_average.toFixed(1)}</div>
+        <div className="text-xl font-semibold  text-white">{dt?.title}</div>
+        <div className=" text-white">Rate : {dt?.vote_average.toFixed(1)}</div>
       </div>
     </div>
   );
