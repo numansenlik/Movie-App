@@ -4,6 +4,7 @@ import ThemeComp from "./ThemeComp";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Tabs from "./Tabs";
+import Link from "next/link";
 const Header = () => {
   const [keyword, setKeyword] = useState("");
   const router = useRouter();
@@ -16,9 +17,12 @@ const Header = () => {
   };
   return (
     <div className="flex items-center gap-5 h-20 mx-5 ">
-      <div className="bg-gray-300 p-3 text-2xl font-bold rounded-lg">
+      <Link
+        href={"/"}
+        className="bg-gray-300 p-3 text-2xl font-bold rounded-lg"
+      >
         Movie Website
-      </div>
+      </Link>
       <div className="flex flex-1 items-center gap-2 border p-3 mx-5 rounded-lg">
         <input
           value={keyword}
