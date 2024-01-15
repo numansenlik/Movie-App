@@ -10,14 +10,14 @@ const Tabs = () => {
       name: "Popular",
       url: "popular",
     },
-    { name: "Latest", url: "latest" },
+    { name: "Top Rated", url: "top_rated" },
     {
       name: "Up Coming",
       url: "upcoming",
     },
   ];
   return (
-    <div className="p-5 m-5 bg-gray-100 dark:bg-gray-900 flex items-center justify-center gap-7">
+    <div className="p-5 m-5 dark:bg-gray-900 flex items-center justify-center gap-7">
       {tabs.map((tab, i) => (
         <Link
           key={i}
