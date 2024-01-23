@@ -1,10 +1,10 @@
 "use client";
-import { FaSearch } from "react-icons/fa";
 import ThemeComp from "./ThemeComp";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Tabs from "./Tabs";
 import Link from "next/link";
+import { CiSearch } from "react-icons/ci";
 const Header = () => {
   const [keyword, setKeyword] = useState("");
   const router = useRouter();
@@ -32,7 +32,7 @@ const Header = () => {
           placeholder="Arama Yapiniz!!!"
           type="text"
         />
-        <FaSearch size={25} />
+        <CiSearch size={25} />
       </div>
       <Tabs />
       <ThemeComp />
