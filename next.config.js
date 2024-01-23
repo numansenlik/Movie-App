@@ -1,6 +1,17 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const path = require("path");
+
+const nextConfig = {
   images: {
-    domains: ["image.tmdb.org"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+        port: "",
+        pathname: "**",
+      },
+    ],
   },
 };
+
+module.exports = nextConfig;

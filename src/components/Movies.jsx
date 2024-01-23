@@ -9,13 +9,13 @@ const Movies = ({ dt }) => {
       onClick={() => router.push(`/movie/${dt?.id}`)}
       className="min-w-[400px] flex items-center relative flex-wrap cursor-pointer"
     >
-      <img
+      <Image
         className="object-cover h-[300px]"
         width={400}
         height={300}
         alt="Image"
-        src={`https:/image.tmdb.org/t/p/original${
-          dt?.backdrop_path ? dt.backdrop_path : dt?.poster_path
+        src={`https:/image.tmdb.org/t/p/original/${
+          dt?.backdrop_path !== null ? dt.backdrop_path : dt?.poster_path
         }`}
       />
       <div className="absolute bottom-0 p-3 w-full h-full flex flex-col justify-end opacity-0 hover:opacity-100 transition duration-500 ">
