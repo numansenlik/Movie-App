@@ -9,7 +9,7 @@ const Movies = ({ dt }) => {
       onClick={() => router.push(`/movie/${dt?.id}`)}
       className="min-w-[400px] flex items-center relative flex-wrap cursor-pointer"
     >
-      <Image
+      <img
         className="object-cover h-[300px]"
         width={400}
         height={300}
