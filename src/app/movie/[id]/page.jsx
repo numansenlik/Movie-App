@@ -37,7 +37,7 @@ const Page = async ({ params }) => {
         </div>
         <div className="w-1/2  text-white">{movieDetail?.overview}</div>
         <div className="w-1/2 my-3  text-white">
-          {movieDetail?.release_date} - {movieDetail?.vote_average.toFixed(2)}
+          {movieDetail?.release_date} - {movieDetail?.vote_average?.toFixed(2)}
         </div>
         <div className="border my-4 w-32 p-2 rounded-md text-center text-lg cursor-pointer font-bold hover:bg-white hover:text-gray-600 text-white">
           Trail

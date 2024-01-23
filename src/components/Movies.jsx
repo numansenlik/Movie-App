@@ -10,7 +10,7 @@ const Movies = ({ dt }) => {
       className="min-w-[400px] flex items-center relative flex-wrap cursor-pointer"
     >
       <Image
-        className="object-cover"
+        className="object-cover h-[300px]"
         width={400}
         height={300}
         alt="Image"
@@ -20,7 +20,7 @@ const Movies = ({ dt }) => {
       />
       <div className="absolute bottom-0 p-3 w-full h-full flex flex-col justify-end opacity-0 hover:opacity-100 transition duration-500 ">
         <div className="text-xl font-semibold  text-white">{dt?.title}</div>
-        <div className=" text-white">Rate : {dt?.vote_average.toFixed(1)}</div>
+        <div className=" text-white">Rate : {dt?.vote_average?.toFixed(1)}</div>
       </div>
     </div>
   );

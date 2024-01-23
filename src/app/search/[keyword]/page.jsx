@@ -21,7 +21,7 @@ const Page = async ({ params }) => {
       {!data?.results ? (
         <div>Aranilan isim esleşmedi </div>
       ) : (
-        <div className="flex items-center flex-wrap gap-3">
+        <div className="flex items-center flex-wrap gap-3 justify-center">
           {data?.results?.map((dt, i) => (
             <Movies key={i} dt={dt} />
           ))}
