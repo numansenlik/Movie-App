@@ -1,5 +1,5 @@
 "use client";
-import { BiSearch } from "react-icons/bi";
+import { FaSearch } from "react-icons/fa";
 import ThemeComp from "./ThemeComp";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -32,7 +32,7 @@ const Header = () => {
           placeholder="Arama Yapiniz!!!"
           type="text"
         />
-        <BiSearch size={25} />
+        <FaSearch size={25} />
       </div>
       <Tabs />
       <ThemeComp />
