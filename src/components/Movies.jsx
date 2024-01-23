@@ -14,7 +14,7 @@ const Movies = ({ dt }) => {
         width={400}
         height={300}
         alt="Image"
-        src={`https:/image.tmdb.org/t/p/original/${
+        src={`https://image.tmdb.org/t/p/original/${
           dt?.backdrop_path !== null ? dt.backdrop_path : dt?.poster_path
         }`}
       />
