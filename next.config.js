@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   images: {
     remotePatterns: [
       {
@@ -7,7 +7,6 @@ const nextConfig = {
         hostname: "image.tmdb.org",
       },
     ],
+    domains: ["https:/image.tmdb.org"],
   },
 };
-
-module.exports = nextConfig;

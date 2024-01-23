@@ -15,7 +15,7 @@ const Movies = ({ dt }) => {
         height={300}
         alt="Image"
         src={`https:/image.tmdb.org/t/p/original${
-          dt?.backdrop_path || dt?.poster_path
+          dt?.backdrop_path ? dt.backdrop_path : dt?.poster_path
         }`}
       />
       <div className="absolute bottom-0 p-3 w-full h-full flex flex-col justify-end opacity-0 hover:opacity-100 transition duration-500 ">
