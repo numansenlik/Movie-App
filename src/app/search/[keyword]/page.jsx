@@ -16,7 +16,6 @@ const Page = async ({ params }) => {
     options
   );
   const data = await res.json();
-  console.log(data.results, "data sayfasi");
   return (
     <div>
       {!data?.results ? (

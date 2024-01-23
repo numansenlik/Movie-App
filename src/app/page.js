@@ -17,7 +17,6 @@ const Page = async ({ searchParams }) => {
   );
   const data = await res.json();
 
-  console.log(searchParams.genre);
   return (
     <div className=" flex items-center justify-center flex-wrap gap-3 ">
       {data?.results?.map((dt, i) => (

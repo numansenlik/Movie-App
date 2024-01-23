@@ -21,7 +21,6 @@ const Page = async ({ params }) => {
   const id = params.id;
 
   const movieDetail = await getMovie(id);
-  console.log(movieDetail, "movies");
   return (
     <div className="relative p-7 min-h-screen ">
       <Image
